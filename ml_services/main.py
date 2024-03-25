@@ -2,9 +2,17 @@ import pika
 import json
 from utils import OCRService
 from utils import send_email_notification
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+RABBITMQ_URL = os.environ.get("RABBITMQ_URL")
+    
+
+
 
 # Connect to RabbitMQ
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host=RABBITMQ_URL))
 channel = connection.channel()
 channel.queue_declare(queue='ocr_service')
 
