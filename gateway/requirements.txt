@@ -1,0 +1,10 @@
+fastapi
+pydantic
+pydantic_core
+python-dotenv
+uvicorn
+pika
+httpx
+PyJWT
+requests
+python-multipart
