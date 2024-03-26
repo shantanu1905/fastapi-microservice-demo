@@ -3,6 +3,7 @@ import json
 from utils import OCRService
 from utils import send_email_notification
 from dotenv import load_dotenv
+import os
 
 # Load environment variables
 load_dotenv()
