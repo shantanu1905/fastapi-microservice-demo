@@ -3,3 +3,4 @@ pillow
 tensorflow
 pandas
 python-dotenv
+keras-ocr
